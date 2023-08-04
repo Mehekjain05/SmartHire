@@ -37,5 +37,14 @@ def testimonial():
 def error_404():
     return render_template('404.html')
 
+@app.route('/register')
+def register():
+    return render_template('Registration.html')
+
+@app.route('/login')
+def login():
+    return render_template('Login.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
