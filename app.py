@@ -45,6 +45,10 @@ def register():
 def login():
     return render_template('Login.html')
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dash.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
