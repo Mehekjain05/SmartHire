@@ -56,7 +56,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 response = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
   messages=[
-    {"role": "AI", "content": "As a member of the HR team, your task is to extract a python list of skills from the resumes of candidates applying for a job. Your goal is to provide a concise and focused list of skills (techinical and non-technical skills) without any elaboration or irrelevant information. Your prompt should ensure that the list of skills extracted accurately reflects the candidate's relevant expertise and qualifications. Avoid including any additional details or explanations in the list. Your prompt should guide the AI model to provide a straightforward and precise python list of skills from the candidate's resume. Template - ```AI : [Python list of skills]``` " },
+    {"role": "AI", "content": "As a member of the HR team, your task is to extract a python list of skills from the resumes of candidates applying for a job. Your goal is to provide a concise and focused list of skills (techinical and non-technical skills) without any elaboration or irrelevant information. Your prompt should ensure that the list of skills extracted accurately reflects the candidate's relevant expertise and qualifications. Avoid including any additional details or explanations in the list. Your prompt should guide the AI model to provide a straightforward and precise python list of skills from the candidate's resume. All the extracted skills should strictly be in lower case by default. Template - ```AI : [Python list of skills]``` " },
     {"role": "Applicant", "content": "{resume_text}"}
   ]
 )
@@ -65,17 +65,24 @@ print(response.choices[0].message)
 
 # Ranking CV
 applicant_skills = response.choices[0].message
-required_skills = {'GET FROM DATABASE': 'weightage'}
+required_skills = {'GET FROM DATABASE (skill_name)': 'weightage(integer)'}
 
 def cv_ranker(applicant_skills, required_skills):
     skillset = []
     extra_skills = []
+    total_score = 0
+    actual_total_weight = 0
+    for key, value in required_skills.items():
+        actual_total_weight += required_skills[key]
+
+
     for skill in applicant_skills:
-        if skill in required_skills:
+        if skill.lower() in required_skills:
             skillset.append(skill)
+            total_score += required_skills[skill]
         else:
             extra_skills.append(skill)
 
-    
+    final_rank = (total_score/ actual_total_weight) *10
 
-    return skillset, extra_skills
+    return final_rank
