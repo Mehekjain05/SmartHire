@@ -129,7 +129,7 @@ h6 span {
     height: 100%;
     background-color: #2a2b38;
     position: absolute;
-    border-radius: 0px;
+    border-radius: 3%;
     left: 0;
     top: 0;
     -webkit-transform-style: preserve-3d;

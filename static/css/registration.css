@@ -16,6 +16,75 @@
   padding-left: .75em;
   padding-right: .75em;
   }
+
   .card-registration .select-arrow {
   top: 13px;
   }
+
+  .btn {
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: none;
+    background-color: #c32157;
+    color: #fff;
+    box-shadow: 0 8px 24px 0 rgba(18, 248, 173, .2)
+}
+
+.btn:active,
+.btn:focus {
+    background-color: #fff;
+    color: #EA2C62;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2)
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #EA2C62;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2)
+}
+
+.card-body{
+  background-color: #2a2b38;
+  border-radius: 2%;
+}
+
+.white{
+  color: white;
+}
+
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+}
+
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+}
