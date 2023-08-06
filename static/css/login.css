@@ -6,7 +6,7 @@ body {
     font-size: 15px;
     line-height: 1.7;
     color: #fff;
-    background-color: #00B074;
+    background-color: #c32157;
     overflow-x: hidden
 }
 
@@ -260,7 +260,7 @@ h6 span {
     -ms-flex-pack: center;
     text-align: center;
     border: none;
-    background-color: #00B074;
+    background-color: #c32157;
     color: #fff;
     box-shadow: 0 8px 24px 0 rgba(18, 248, 173, .2)
 }

@@ -28,13 +28,14 @@
 }
 
 body {
+  color: white;
   height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  background-color: #050e2d;
+  background-color: #c32157;
 }
 
 .app-container {
@@ -142,7 +143,7 @@ button { cursor: pointer; }
   margin-bottom: 12px;
   
   &:not(.active):hover {
-    background-color: var(--list-item-hover);
+    background-color: var(--applicant-bg);
   }
   
   &.active {
