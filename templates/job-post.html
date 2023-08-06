@@ -8,17 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <title>Job Posting</title>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
   <div class="container">
-    <h1>Post a Job</h1>
+    <h1 class="text-center">Post Your Job</h1>
     <form id="jobForm">
-      <div class="mb-3">
-        <label for="formFile" class="form-label">Default file input example</label>
-        <input class="form-control" type="file" id="formFile">
-      </div>
       <label for="jobTitle">Job Title:</label>
       <input type="text" id="jobTitle" required>
 
@@ -31,22 +26,20 @@
         <option value="partTime">Part Time</option>
         <option value="contract">Contract</option>
       </select>
-      <label for="salaryRange">Salary Range:</label>
-      <input type="range" id="salaryRange" name="salaryRange" min="10000" max="110000" step="100" value="45000">
-      <p>Selected Value: <span id="rangeValue">45000</span></p>
+      <label for="salaryRange">Salary (Approximately):</label>
+      <input type="range" id="salaryRange" name="salaryRange" min="1000" max="100000" step="1000" value="5000">
+      <p>Selected Value: <span id="rangeValue">5000</span></p>
 
-      <h2>Required Skills:</h2>
+      <h4>Required Skills:</h4>
       <div class="skills-section" id="skillsSection">
         <!-- Skills will be dynamically added here -->
       </div>
-      <button class="add-button" onclick="addSkillInput()">+ Add skill</button>
+      <button type="button" class="add-button" onclick="addSkillInput()">+ Add skill</button>
       <button type="submit">Post Job</button>
     </form>
 
     <div id="postedJobs"></div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="static/js/job-post.js"></script>
 </body>
 

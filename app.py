@@ -51,7 +51,7 @@ def dashboard():
 
 @app.route('/jobpost')
 def jobpost():
-    return render_template('jobpost.html')
+    return render_template('job-post.html')
 
 
 if __name__ == "__main__":
