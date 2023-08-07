@@ -50,11 +50,11 @@ function addSkillInput() {
   
   const skillNameInput = document.createElement("input");
   skillNameInput.type = "text";
-  skillNameInput.className = "skill-name";
+  skillNameInput.className = "skill-name form-style";
   skillNameInput.placeholder = "Enter Skill Name";
   
   const skillWeightInput = document.createElement("select");
-  skillWeightInput.className = "skill-weight";
+  skillWeightInput.className = "skill-weight form-style";
   for (let i = 1; i <= 5; i++) {
     const option = document.createElement("option");
     option.value = i;

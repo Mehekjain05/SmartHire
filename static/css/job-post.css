@@ -1,71 +1,182 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #EA2C62;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c32157;
+}
+
+.container {
+  margin: 0px auto;
+  padding: 20px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #EA2C62;
+  border-radius: 3px;
+}
+
+/* Add the new CSS styles here */
+
+textarea {
+  resize: vertical;
+  height: 150px;
+  font-size: 14px;
+  width: 99%;
+  border-radius: 4px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+/* End of new CSS styles */
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.skill-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.remove-button {
+  background-color: #d50a1e;
+  border: 1px solid #d50a1e;
+  border-radius: 50%;
+  height: 2.3em;
+  color: white;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #c32157;
+  color: #fff;
+  box-shadow: 0 8px 24px 0 rgba(18, 248, 173, .2);
+}
+
+.btn:active,
+.btn:focus {
+  background-color: #fff;
+  color: #EA2C62;
+  box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2);
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #EA2C62;
+  box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2);
+}
+
+.form-style {
+  height: 35px;
+  width: 99%;
+  border-radius: 4px;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+.container {
+  background-color: #2a2b38;
+  border-radius: 2%;
+}
+
+.containerALL {
+  background-color: #2a2b38;
+  border-radius: 2%;
+  max-width: 90vw; /* Adjust the width as needed */
+  margin: 50px auto;
+  border: 1px solid #c32157;
+  border-radius: 2%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.white {
+  color: white;
+}
+
+/* ... your existing CSS rules ... */
+
+/* ... your existing CSS rules ... */
+
+/* New CSS for dividing the page */
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 90vw; /* Adjust the width as needed */
   
+}
+
+.form-section {
+  flex: 1;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust the layout for smaller screens (mobile devices) */
   .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #EA2C62;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
   }
-  
-  form {
-    display: grid;
-    gap: 10px;
+
+  .right-section {
+    border-left: none;
+    border-top: 1px solid #c32157;
   }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #EA2C62;
-    border-radius: 3px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #EA2C62;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  h2 {
-    margin-bottom: 10px;
-  }
-  
-  .skill-input {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  select {
-    padding: 5px;
-    margin-right: 10px;
-  }
-  
-  .remove-button {
-    background-color: #dc3545;
-    border: 1px solid #dc3545;
-    border-radius: 50%;
-    height: 7vh;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  
+}
