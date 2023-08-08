@@ -5,6 +5,7 @@ body {
   background-color: #c32157;
 }
 
+
 .container {
   margin: 0px auto;
   padding: 20px;
@@ -28,8 +29,6 @@ select {
   border-radius: 3px;
 }
 
-/* Add the new CSS styles here */
-
 textarea {
   resize: vertical;
   height: 150px;
@@ -44,7 +43,6 @@ textarea {
   box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
 }
 
-/* End of new CSS styles */
 
 h2 {
   margin-bottom: 10px;
@@ -67,7 +65,7 @@ select {
   border: 1px solid #d50a1e;
   border-radius: 50%;
   height: 2.3em;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 button:hover {
@@ -141,27 +139,22 @@ button:hover {
 .containerALL {
   background-color: #2a2b38;
   border-radius: 2%;
-  max-width: 90vw; /* Adjust the width as needed */
-  margin: 50px auto;
+  padding: 20px;
   border: 1px solid #c32157;
   border-radius: 2%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .white {
   color: white;
 }
 
-/* ... your existing CSS rules ... */
-
-/* ... your existing CSS rules ... */
-
 /* New CSS for dividing the page */
 .container {
   display: flex;
   justify-content: center;
   max-width: 90vw; /* Adjust the width as needed */
-  
 }
 
 .form-section {
@@ -179,4 +172,20 @@ button:hover {
     border-left: none;
     border-top: 1px solid #c32157;
   }
+}
+
+#particles-js{
+  position : fixed; 
+  top: 0;
+  bottom: 0;
+  width:100%; 
+  height:100%; 
+  z-index:-1;
+  background: black;
+}
+
+.content-wrapper {
+  padding: 3% 0px; 
+  margin: 0 auto; 
+  max-width: 90vw;
 }

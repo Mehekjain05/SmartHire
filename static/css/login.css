@@ -6,8 +6,17 @@ body {
     font-size: 15px;
     line-height: 1.7;
     color: #fff;
-    background-color: #c32157;
-    overflow-x: hidden
+    /* background-color: #c32157;
+    background-image: url('../img/hr1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; */
+    overflow-x: hidden;
+}
+
+#particles-js{
+    position : fixed; width:100%; height:100%; z-index:-1;
+    background: black;
 }
 
 a {
@@ -46,7 +55,7 @@ h6 span {
 .section {
     position: relative;
     width: 100%;
-    display: block
+    display: block;
 }
 
 .full-height {
